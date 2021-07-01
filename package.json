@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vazir-font": "^29.1.0"
   },
   "devDependencies": {}
 }
