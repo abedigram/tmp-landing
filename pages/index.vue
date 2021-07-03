@@ -26,25 +26,23 @@
 			<div class="rect white"></div>
 			<img src="/shoes/sec2.png" class="shoe" />
 		</section>
-		<section class="sec3 fullpage ">
+		<section class="sec3 fullpage">
 			<div class="rect gray"></div>
 			<img src="/shoes/sec3.png" class="shoe" />
 		</section>
-		<section class="sec4 fullpage ">
+		<section class="sec4 fullpage">
 			<!-- <div class="rect gray"></div> -->
 			<img src="/shoes/sec4.png" class="shoe" />
 		</section>
-		<section class="sec5 fullpage ">
+		<section class="sec5 fullpage">
 			<!-- <div class="rect gray"></div> -->
 			<!-- <img src="/shoes/sec4.png" class="shoe" /> -->
 		</section>
-		<section class="sec6 fullpage ">
+		<section class="sec6 fullpage">
 			<!-- <div class="rect gray"></div> -->
 			<img src="/shoes/sec6.png" class="shoe" />
 		</section>
-		<section class="sec7 fullpage">
-			
-		</section>
+		<section class="sec7 fullpage"></section>
 	</div>
 </template>
 
@@ -77,13 +75,21 @@ export default {
 				"پی یو",
 				"کلیات",
 				"اسلایدر",
-			 ];
+			];
 		},
 		//todo
 		handleMouseWheel: function (e) {
-			if (!((this.activeSection + 1) > (this.offsets.length - 1))  && e.wheelDelta < 30 && !this.inMove) {
+			if (
+				!(this.activeSection + 1 > this.offsets.length - 1) &&
+				e.wheelDelta < 30 &&
+				!this.inMove
+			) {
 				this.moveUp();
-			} else if (!((this.activeSection - 1) < 0) && e.wheelDelta > 30 && !this.inMove) {
+			} else if (
+				!(this.activeSection - 1 < 0) &&
+				e.wheelDelta > 30 &&
+				!this.inMove
+			) {
 				this.moveDown();
 			}
 
@@ -92,9 +98,17 @@ export default {
 		},
 		//todo
 		handleMouseWheelDOM: function (e) {
-			if (!((this.activeSection + 1) > (this.offsets.length - 1))  && e.detail > 0 && !this.inMove) {
+			if (
+				!(this.activeSection + 1 > this.offsets.length - 1) &&
+				e.detail > 0 &&
+				!this.inMove
+			) {
 				this.moveUp();
-			} else if (!((this.activeSection - 1) < 0) && e.detail < 0 && !this.inMove) {
+			} else if (
+				!(this.activeSection - 1 < 0) &&
+				e.detail < 0 &&
+				!this.inMove
+			) {
 				this.moveDown();
 			}
 
@@ -195,7 +209,7 @@ export default {
 .gray {
 	background-color: gray;
 }
-.sec1{
+.sec1 {
 	position: relative;
 	float: left;
 	margin-right: 60%;
@@ -219,7 +233,7 @@ export default {
 	width: 20%;
 }
 
-.sec2{
+.sec2 {
 	position: relative;
 }
 .sec2 .rect {
@@ -230,14 +244,14 @@ export default {
 	width: 150%;
 	height: 100vh;
 }
-.sec2 img.shoe{
+.sec2 img.shoe {
 	position: absolute;
 	top: 30%;
 	right: 15%;
 	height: 50vh;
 }
 
-.sec3{
+.sec3 {
 	position: relative;
 }
 .sec3 .rect {
@@ -248,30 +262,30 @@ export default {
 	width: 150%;
 	height: 100vh;
 }
-.sec3 img.shoe{
+.sec3 img.shoe {
 	position: absolute;
 	top: 30%;
 	left: 10%;
 	height: 50vh;
-	transform: scaleX(-1) ;
+	transform: scaleX(-1);
 }
 
-.sec4{
+.sec4 {
 	/* overflow: hidden; */
 	position: relative;
 }
-.sec4 img.shoe{
+.sec4 img.shoe {
 	position: absolute;
 	bottom: -75%;
 	left: -70%;
 	height: 180vh;
 	transform: scaleX(-1) rotate(-20deg);
 }
-.sec6{
+.sec6 {
 	position: relative;
 }
 
-.sec6 img.shoe{
+.sec6 img.shoe {
 	position: absolute;
 	top: 20%;
 	left: 30%;
