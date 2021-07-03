@@ -30,6 +30,21 @@
 			<div class="rect gray"></div>
 			<img src="/shoes/sec3.png" class="shoe" />
 		</section>
+		<section class="sec4 fullpage ">
+			<!-- <div class="rect gray"></div> -->
+			<img src="/shoes/sec4.png" class="shoe" />
+		</section>
+		<section class="sec5 fullpage ">
+			<!-- <div class="rect gray"></div> -->
+			<!-- <img src="/shoes/sec4.png" class="shoe" /> -->
+		</section>
+		<section class="sec6 fullpage ">
+			<!-- <div class="rect gray"></div> -->
+			<img src="/shoes/sec6.png" class="shoe" />
+		</section>
+		<section class="sec7 fullpage">
+			
+		</section>
 	</div>
 </template>
 
@@ -54,7 +69,15 @@ export default {
 				let sectionOffset = sections[i].offsetTop;
 				this.offsets.push(sectionOffset);
 			}
-			this.labels = ["معرفی کوتاه", "بخش دوم"];
+			this.labels = [
+				"معرفی کوتاه",
+				"بخش دوم",
+				"بخش سوم",
+				"اسپیسر",
+				"پی یو",
+				"کلیات",
+				"اسلایدر",
+			 ];
 		},
 		//todo
 		handleMouseWheel: function (e) {
@@ -233,4 +256,26 @@ export default {
 	transform: scaleX(-1) ;
 }
 
+.sec4{
+	/* overflow: hidden; */
+	position: relative;
+}
+.sec4 img.shoe{
+	position: absolute;
+	bottom: -75%;
+	left: -70%;
+	height: 180vh;
+	transform: scaleX(-1) rotate(-20deg);
+}
+.sec6{
+	position: relative;
+}
+
+.sec6 img.shoe{
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	height: 70vh;
+	/* transform: scaleX(-1) ; */
+}
 </style>
