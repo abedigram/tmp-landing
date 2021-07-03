@@ -58,9 +58,9 @@ export default {
 		},
 		//todo
 		handleMouseWheel: function (e) {
-			if (e.wheelDelta < 30 && !this.inMove) {
+			if (!((this.activeSection + 1) > (this.offsets.length - 1))  && e.wheelDelta < 30 && !this.inMove) {
 				this.moveUp();
-			} else if (e.wheelDelta > 30 && !this.inMove) {
+			} else if (!((this.activeSection - 1) < 0) && e.wheelDelta > 30 && !this.inMove) {
 				this.moveDown();
 			}
 
@@ -69,9 +69,9 @@ export default {
 		},
 		//todo
 		handleMouseWheelDOM: function (e) {
-			if (e.detail > 0 && !this.inMove) {
+			if (!((this.activeSection + 1) > (this.offsets.length - 1))  && e.detail > 0 && !this.inMove) {
 				this.moveUp();
-			} else if (e.detail < 0 && !this.inMove) {
+			} else if (!((this.activeSection - 1) < 0) && e.detail < 0 && !this.inMove) {
 				this.moveDown();
 			}
 
