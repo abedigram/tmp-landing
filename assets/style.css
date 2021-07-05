@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  color: #fff;
-  font-family: Vazir, sans-serif;
+  /* color: #fff; */
+  font-family: iranyekan, sans-serif;
   overflow: hidden;
+  background-color: #e1e1e1;
 }
 
 h2 {
@@ -73,7 +74,7 @@ h1.black {
   } */
 
 .sections-menu div {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .sections-menu .menu-point {
   width: 1rem;
@@ -96,10 +97,10 @@ h1.black {
   /* transition: 0.4s ease all; */
   color: black;
   width: 150px;
-  height: 3rem;
+  height: 2rem;
   /* margin-top: -200%; */
   /* margin-right: 10%; */
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 1rem;
   text-align: right;
@@ -107,8 +108,73 @@ h1.black {
   display: inline-block;
 }
 
+.shoe{
+  filter: drop-shadow(0px 40px 30px #00000080)
+}
+.shadow{
+  box-shadow: 0 -10px 48px 0 #00000080;
+}
+.darkblue{
+  background-color: rgb(56, 56, 72);
+}
+.texture{
+	background-image: url('/wood1.jpg');
+	background-repeat: repeat;
+	background-size: 50%;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 2.5em;
   }
 }
+
+@media (max-width: 575.98px) { 
+  .sec1 img.shoe{
+    left: -20% !important;
+    top: 20% !important;
+    width: 80% !important;
+  }
+  .sec1 img.shoe:nth-child(2) {
+    left: 20% !important; 
+    /* z-index: -3; */
+  }
+  .rotated-rect {
+    top: 40% !important;
+    /* left: -30%; */
+    /* width: 150%; */
+    /* height: 100vh; */
+  }
+  .sections-menu .menu-point {
+    margin: 0 2rem;
+    background-color: white;
+  }
+  .sections-menu{
+    margin-top: 10% !important;
+  }
+  .sections-menu .label{
+    color: white !important;
+    font-size: 1rem;
+    margin-right: -1rem !important;
+  }
+  .sec1 .logo{
+    position: absolute !important;
+    z-index: 10 !important;
+    top: 70% !important;
+    left: 10%;
+    width: 50% !important;
+  }
+
+  .sec2 img.shoe, .sec3 img.shoe{
+    height: 20% !important;
+    right: 25% !important;
+    top: 55% !important;
+  }
+
+  .sec4 img.shoe{
+    height: 100% !important;
+    top: 20% !important;
+    left: -120% !important;
+  }
+ }

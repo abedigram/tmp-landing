@@ -16,24 +16,25 @@
 				</span>
 			</div>
 		</div>
-		<section class="sec1 fullpage white">
+		<section class="sec1 fullpage">
 			<img src="nahrain-logo.png" class="logo" />
 			<img src="/shoes/sec1.png" class="shoe" />
-			<div class="rotated-rect gray"></div>
+			<div class="rotated-rect darkblue shadow"></div>
 			<img src="/shoes/sec1.png" class="shoe" />
 		</section>
-		<section class="sec2 fullpage gray">
-			<div class="rect white"></div>
+		<section class="sec2 fullpage darkblue">
+			<div class="rect texture"></div>
 			<img src="/shoes/sec2.png" class="shoe" />
 		</section>
-		<section class="sec3 fullpage">
-			<div class="rect gray"></div>
+		<section class="sec3 fullpage darkblue">
+			<div class="rect texture"></div>
 			<img src="/shoes/sec3.png" class="shoe" />
 		</section>
 		<section class="sec4 fullpage">
 			<!-- <div class="rect gray"></div> -->
 			<img src="/shoes/sec4.png" class="shoe" />
 		</section>
+
 		<section class="sec5 fullpage">
 			<!-- <div class="rect gray"></div> -->
 			<!-- <img src="/shoes/sec4.png" class="shoe" /> -->
@@ -42,11 +43,23 @@
 			<!-- <div class="rect gray"></div> -->
 			<img src="/shoes/sec6.png" class="shoe" />
 		</section>
-		<section class="sec7 fullpage"></section>
+
+		<section class="sec7 fullpage">
+			<carousel :per-page="4" style="width: 50%; height: 50vh; background-color: white;">
+				<slide v-for="i in 10" :key="i" style="margin: auto 0;">
+					<div style=" padding: 1em; background-color:white;">
+					<img :src="'shoes/sec' + i + '.png'" alt="" width="100%; margin:0">
+
+					</div>
+				</slide>
+			</carousel>
+		</section>
 	</div>
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
+
 export default {
 	data() {
 		return {
@@ -56,6 +69,10 @@ export default {
 			labels: [],
 			touchStartY: 0,
 		};
+	},
+	components: {
+		Carousel,
+		Slide,
 	},
 	computed: {},
 	methods: {
@@ -209,6 +226,7 @@ export default {
 .gray {
 	background-color: gray;
 }
+
 .sec1 {
 	position: relative;
 	float: left;
@@ -223,7 +241,7 @@ export default {
 }
 .sec1 img.shoe:nth-child(2) {
 	transform: scaleX(-1) rotate(-90deg);
-	left: 18%;
+	left: 20%;
 	/* z-index: -3; */
 }
 .sec1 img.logo {
@@ -239,10 +257,10 @@ export default {
 .sec2 .rect {
 	display: inline-block;
 	position: absolute;
-	top: 65%;
-	left: -30%;
-	width: 150%;
-	height: 100vh;
+	top: 60%;
+	left: 0%;
+	width: 100%;
+	height: 50%;
 }
 .sec2 img.shoe {
 	position: absolute;
@@ -257,10 +275,10 @@ export default {
 .sec3 .rect {
 	display: inline-block;
 	position: absolute;
-	top: 65%;
-	left: -30%;
+	top: 60%;
+	/* left: -30%; */
 	width: 150%;
-	height: 100vh;
+	height: 50%;
 }
 .sec3 img.shoe {
 	position: absolute;
