@@ -18,13 +18,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v29.1.0/dist/font-face.css' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/style.css',
+    '@/assets/fontiran.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
